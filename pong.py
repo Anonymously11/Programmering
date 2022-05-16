@@ -63,12 +63,12 @@ def onStep():
     ball1.move()
     uncleverfying = randrange(-2,2)
     if uncleverfying < 1.7 and uncleverfying > -1.7:
-        if ball1.body.centerY < player2.centerY:
+        if ball1.body.centerY < player2.centerY+uncleverfying:
             updown = -4
         else:
             updown = 4
     else:
         updown = 0
-    player2.centerY += updown+uncleverfying
+    player2.centerY += updown
 
 cmu_graphics.run()
